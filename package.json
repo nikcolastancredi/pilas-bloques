@@ -43,8 +43,10 @@
   },
   "dependencies": {
     "blockly-package": "^1.0.0",
+    "clientjs": "^0.1.11",
     "pilas-bloques-exercises": "1.2.2",
-    "proceds-blockly": "^1.0.0"
+    "proceds-blockly": "^1.0.0",
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
     "@ember/jquery": "^1.1.0",
@@ -53,9 +55,9 @@
     "broccoli-funnel": "^2.0.2",
     "broccoli-merge-trees": "^4.2.0",
     "devtron": "^1.4.0",
-    "electron": "9.1.2",
-    "electron-packager": "15.0.0",
-    "electron-rebuild": "1.11.0",
+    "electron": "9.2.1",
+    "electron-packager": "15.1.0",
+    "electron-rebuild": "2.0.0",
     "ember-ajax": "^5.0.0",
     "ember-auto-import": "^1.6.0",
     "ember-blockly": "^0.3.0",
