@@ -21,6 +21,8 @@ Router.map(function() {
     this.route('verLibro', {path: ":libro_id"});
   });
   this.route('galeria');
+  this.route('login');
+  this.route('recovery');
 });
 
 Router.reopen({
