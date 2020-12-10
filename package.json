@@ -60,6 +60,7 @@
     "electron-rebuild": "2.0.0",
     "ember-ajax": "^5.0.0",
     "ember-auto-import": "^1.6.0",
+    "ember-better-popup": "^0.1.0",
     "ember-blockly": "^0.3.0",
     "ember-cli": "^3.19.0",
     "ember-cli-app-version": "^3.2.0",

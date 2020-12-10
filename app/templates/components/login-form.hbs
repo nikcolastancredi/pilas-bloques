@@ -1,0 +1,26 @@
+<Header/>
+
+<div class='contenido-principal'>
+    <div class="box">
+        <p><img class='main-logo' src='imagenes/main-logo.png' width="468" height="262"></p>
+
+        <div>
+        <p>Usuario: {{input type="text" name="username" value=this.userName}}</p>
+        <p>Contraseña: {{input type="password" name="password" value=this.password}}</p>
+        <p><button type="button" {{on 'click' this.login}}>Entrar</button></p>
+        </div>
+
+        
+        <div>
+        <p>{{#link-to 'recovery'}} <button type="button">Recuperar Contraseña</button> {{/link-to}}</p>     
+        <p><button type="button" {{on 'click' this.registration}}>Registrarse</button></p>
+        </div>
+
+        <hr>
+        <p>
+            Visitá la sección<Link @href={{href-to "acercade"}} @openOnNewTab={{false}}><strong>Acerca de</strong></Link>
+            para conocer más en detalle de qué se trata esta herramienta y quién la desarrolló.
+        </p>
+    </div>
+
+</div>
