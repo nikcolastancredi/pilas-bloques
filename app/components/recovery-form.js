@@ -15,20 +15,20 @@ export default Component.extend ({
     actions:{
         passwordRecovery() {
         
-            if(this.userName == '' || this.pass == ''){
+            if(this.userName == ''){
                 alert('El campo usuario y/o Contraseña no puede ser vacio')
             }
             else{
                 //Validacion en una lista en ves de la base de datos
                 if(userExistsInDB(this.userName)){
-                    this.existUser = !this.bool;
+                    this.existUser = true;
                     //Tiene que aparecer dos campos parentCUIL y newPassword
                     //Validar el campo del parentCuil 
                     console.log(this.existUser);
                     const expresion = /\b(20|23|24|27|30|33|34)(\D)?[0-9]{8}(\D)?[0-9]/g;
                     const valido = this.cuil.match(expresion); 
                     if (valido && cuilExistsInDB(this.cuil)){
-                        updatePassword(this.pass);
+                        //updatePassword(this.pass);
                         alert('Se recupero la contraseña');
                     }
                     else {
@@ -37,6 +37,7 @@ export default Component.extend ({
                 
                 }
                 else{
+                    this.existUser = false;
                     alert('No hay un usuario registrado con ese nombre. ¿Quizás te equivocaste al escribir ?. Si no te registraste podés hacerlo acá')
                 }
                 

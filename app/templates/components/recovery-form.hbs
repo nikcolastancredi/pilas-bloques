@@ -4,18 +4,18 @@
     <div class="box">
         <p><img class='main-logo' src='imagenes/main-logo.png' width="468" height="262"></p>
 
-        <p>Usuario: {{input type="text" name="username" value=this.userName}}</p>
+        <p>Usuario: {{input type="text" name="username" value=userName}}</p>
         
         {{#if existUser }}
-        <p>Cuil: {{input type="text" name="cuil" value=this.cuil}}</p>
-        <p>Nueva Contraseña: {{input type="password" name="pass" value=this.pass}}</p>
+            <p>Cuil: {{input type="text" name="cuil" value=cuil}}</p>
+            <p>Nueva Contraseña: {{input type="password" name="pass" value=pass}}</p>
         {{/if}}
 
         
 
         
         <div>
-        <p><button type="button" {{on 'click' this.passwordRecovery }} >Recuperar Contraseña</button></p>
+        <p><button type="button" {{action "passwordRecovery"}} >Recuperar Contraseña</button></p>
         {{!-- Cambiar el comportamiento deriva a formulario de registro --}}
         <p>{{#link-to 'login'}} <button type="button">Registrarse</button> {{/link-to}}</p>
         </div>
